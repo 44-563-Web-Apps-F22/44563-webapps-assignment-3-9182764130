@@ -64,5 +64,18 @@
 
 </table>
 
+***
+<h2>code snippet</h2>
+<blockquote>
+  <a href="https://stackoverflow.com/questions/7709233/how-to-get-page-id-of-a-facebook-page">stack over flow</a>
+"How to get page id of a facebook page"
+</blockquote>
+<pre>
+  function get_ID_by_page_name($page_name) {
+    global $wpdb;
+    $page_name_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."' AND post_type = 'page'");
+    return $page_name_id;
+ }
+</pre>
     </body>
 </html>
